@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/*=======================================
+    Cabecera/HEADER princial del sitio */
+.header-menu {
+    background: rgb(40, 45, 57)
+}
+
+/*--------------------------------------*/
+
+/* ======================================================
+    Imagenes en el index.html, de referencia a la galería
+        Transformaciones:
+            *1* Reducción minima de tamaño
+            *2* Efecto blur (hacer borrosa la imagen)
+        Animaciones:
+            **1** Tamaño original
+            **2** Elimina el blur */
+
+.preview-gallery-index img {
+    -webkit-transform: scale(.95);
+            transform: scale(.95); /*1*/
+    -webkit-filter: blur(.10px);
+            filter: blur(.10px);/*2*/
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s
+}
+.preview-gallery-index figure figure img:hover {
+    -webkit-transform: scale(1);
+            transform: scale(1);/**1**/
+    -webkit-filter: blur(0);
+            filter: blur(0);/**2**/
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s
+}
+/*--------------------------------------------------------*/
